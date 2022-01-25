@@ -1,2 +1,4 @@
 config.json
 /env/
+/core/__pycache__
+/cmds/__pycache__
