@@ -17,6 +17,7 @@ class Events(Cog_Extension):
         channel = self.bot.get_channel(934773565084033094)
         await channel.send(f"bye, {member}"[:-5])
 
+
     @commands.Cog.listener()
     async def on_message(self,msg):
         if "no" in msg.content:

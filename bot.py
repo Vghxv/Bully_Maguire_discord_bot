@@ -15,6 +15,7 @@ bot = commands.Bot(command_prefix="M ",intents=intents)
 async def on_ready():
     print("bot is ready")
 
+
 @bot.command()
 async def load(ctx,extension):
     bot.load_extension(f"cmds.{extension}")
@@ -31,6 +32,11 @@ async def unload(ctx,extension):
 async def reload(ctx,extension):
     bot.reload_extension(f"cmds.{extension}")
     await ctx.send(f"re - loaded {extension} done")
+
+
+@bot.command()
+async def help(ctx):
+    await ctx.send("hey")
 
 
 for filename in os.listdir("./cmds"):
