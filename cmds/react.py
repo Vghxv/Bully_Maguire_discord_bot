@@ -36,7 +36,7 @@ class react(Cog_Extension):
 
 
     @commands.command()
-    async def great(ctx):
+    async def great(self,ctx):
         gif=discord.File(st["yeahgreat"])
         await ctx.send(file=gif)
 
