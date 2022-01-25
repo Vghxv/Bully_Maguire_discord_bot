@@ -15,9 +15,16 @@ bot = commands.Bot(command_prefix='~',intents=intents)
 async def on_ready():
     channel = bot.get_channel(934773565084033094)
     await channel.send("hey guys")
+
 @bot.command()
 async def ping(ctx):
     await ctx.send(f"{round(bot.latency*1000)}(ms)")
+
+@bot.command()
+
+async def dance(ctx):
+    pic=discord.File(configs["bully-maguire-dance"])
+    await ctx.send(file=pic)
 # @bot.event
 
 # async def on_member_join(member):
