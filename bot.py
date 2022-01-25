@@ -18,18 +18,16 @@ bot = commands.Bot(command_prefix="M ",intents=intents)
 
 @bot.event
 async def on_ready():
-    channel = bot.get_channel(934773565084033094)
-    await channel.send("hey guys")
+    print("bot is ready")
+# @bot.event
+# async def on_member_join(member):
+#     channel = bot.get_channel(934773565084033094)
+#     await channel.send(f"you trash, {member}"[:-5])
 
-@bot.event
-async def on_member_join(member):
-    channel = bot.get_channel(934773565084033094)
-    await channel.send(f"you trash, {member}")
-
-@bot.event
-async def on_member_remove(member):
-    channel = bot.get_channel(934793872712810536)
-    await channel.send(f"bye, {member}")
+# @bot.event
+# async def on_member_remove(member):
+#     channel = bot.get_channel(934773565084033094)
+#     await channel.send(f"bye, {member}"[:-5])
 
 @bot.command()
 async def ping(ctx):
