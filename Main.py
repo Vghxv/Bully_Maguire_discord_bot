@@ -5,7 +5,7 @@ from discord.ext import commands
 with open(".\config.json","r",encoding="UTF8") as config:
     conf=json.load(config)
 
-with open(".\settings","r",encoding="UTF8") as settings:
+with open(".\settings.json","r",encoding="UTF8") as settings:
     st=json.load(settings)
 
 
