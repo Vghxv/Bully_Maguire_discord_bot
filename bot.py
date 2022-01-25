@@ -7,9 +7,8 @@ with open(".\config.json","r",encoding="UTF8") as config:
 
 
 intents=discord.Intents.all()
+bot = commands.Bot(command_prefix="! ",intents=intents)
 
-
-bot = commands.Bot(command_prefix="M ",intents=intents)
 
 @bot.event
 async def on_ready():
@@ -34,15 +33,9 @@ async def reload(ctx,extension):
     await ctx.send(f"re - loaded {extension} done")
 
 
-@bot.command()
-async def help(ctx):
-    await ctx.send("hey")
-
-
 for filename in os.listdir("./cmds"):
     if filename.endswith(".py"):
         bot.load_extension(f"cmds.{filename[:-3]}")
-        #print(filename)
 
 
 if __name__=="__main__":
