@@ -12,6 +12,9 @@ class Settings(Cog_Extension):
     @commands.command()
     async def ping(self,ctx):
         await ctx.send(f"{round(self.bot.latency*1000)}(ms) gonna cry")
+    # @commands.command()
+    # async def about(self):
+
 
 
 

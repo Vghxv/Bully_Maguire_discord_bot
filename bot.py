@@ -7,7 +7,7 @@ with open(".\config.json","r",encoding="UTF8") as config:
 
 
 intents=discord.Intents.all()
-bot = commands.Bot(command_prefix="! ",intents=intents)
+bot = commands.Bot(command_prefix="!",intents=intents)
 
 
 @bot.event
@@ -16,19 +16,20 @@ async def on_ready():
 
 
 @bot.command()
-async def load(ctx,extension):
+async def l(ctx,extension):
     bot.load_extension(f"cmds.{extension}")
     await ctx.send(f"loaded {extension} done")
 
 
 @bot.command()
-async def unload(ctx,extension):
+async def ul(ctx,extension):
     bot.unload_extension(f"cmds.{extension}")
     await ctx.send(f"un - loaded {extension} done")
 
 
 @bot.command()
-async def reload(ctx,extension):
+async def rl(ctx,extension):
+    
     bot.reload_extension(f"cmds.{extension}")
     await ctx.send(f"re - loaded {extension} done")
 

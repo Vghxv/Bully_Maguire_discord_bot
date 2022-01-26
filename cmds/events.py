@@ -24,56 +24,41 @@ class Events(Cog_Extension):
     @commands.Cog.listener()
     async def on_message(self,msg):
         msco=msg.content
-        if "no" in msco:
+        if "no" in msco and msg.author != self.bot.user:
             message=random.choice(st["no"])
-            if message.endswith(".gif"):
-                gif=discord.File(message)
-                await msg.channel.send(file=gif)
+            if message.endswith(".jpg"):
+                jpg=discord.File(message)
+                await msg.channel.send(file=jpg)
             else:
                 await msg.channel.send(message)
-
-
-        elif "dance" in msco:
+        elif "dance" in msco and msg.author != self.bot.user:
             message=random.choice(st["dance"])
             if message.endswith(".gif"):
                 gif=discord.File(message)
                 await msg.channel.send(file=gif)
             else:
                 await msg.channel.send(message)
-            
-
-        elif "pizza time" in msco:
+        elif "pizza" in msco and msg.author != self.bot.user:
             message=random.choice(st["pizzatime"])
-            if message.endswith(".gif"):
-                gif=discord.File(message)
-                await msg.channel.send(file=gif)
+            if message.endswith(".jpg"):
+                jpg=discord.File(message)
+                await msg.channel.send(file=jpg)
             else:
                 await msg.channel.send(message)
 
-
-        elif "got" in msco:
+        elif "got" in msco and msg.author != self.bot.user:
             message=random.choice(st["got"])
-            if message.endswith(".gif"):
-                gif=discord.File(message)
-                await msg.channel.send(file=gif)
+            if message.endswith(".jpg"):
+                jpg=discord.File(message)
+                await msg.channel.send(file=jpg)
             else:
                 await msg.channel.send(message)
-            
-
-        elif "love" in msco:
+        
+        elif "love" in msco and msg.author != self.bot.user:
             message=random.choice(st["love"])
-            if message.endswith(".gif"):
-                gif=discord.File(message)
-                await msg.channel.send(file=gif)
-            else:
-                await msg.channel.send(message)
-
-
-        elif "great" in msco:
-            message=random.choice(st["great"])
-            if message.endswith(".gif"):
-                gif=discord.File(message)
-                await msg.channel.send(file=gif)
+            if message.endswith(".jpg"):
+                jpg=discord.File(message)
+                await msg.channel.send(file=jpg)
             else:
                 await msg.channel.send(message)
 
