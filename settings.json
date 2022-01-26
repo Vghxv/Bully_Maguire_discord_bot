@@ -1,9 +1,9 @@
 {
-    "no":["gonna cry","stings doesn't it","gonna cry",".\\pic\\gonnacry.gif"],
-    "dance":["wanna dance","find us some shade",".\\pic\\bully-maguire-dance.gif"],
-    "pizzatime":["you can buy me pizza sometime","you want pizza?","pizza",".\\pic\\pizzatime.gif"],
-    "got":["so what?","nobody asked","ok",".\\pic\\thatallyougot.gif"],
-    "love":["me?","they love me?",".\\pic\\theyloveme.gif"],
-    "great":[".\\pic\\yeahgreat.gif"]
+    "no":["gonna cry","stings doesn't it","gonna cry"],
+    "dance":["wanna dance","find us some shade"],
+    "pizzatime":["you can buy me pizza sometime","you want pizza?","pizza"],
+    "got":["so what?","nobody asked","ok"],
+    "love":["me?","they love me?"],
+    "great":[]
     
 }
