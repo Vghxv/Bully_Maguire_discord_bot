@@ -6,21 +6,7 @@ import random
 with open(".\settings.json","r",encoding="UTF8") as settings:
     st=json.load(settings)
 
-class Events(Cog_Extension):
-
-
-    @commands.Cog.listener()
-    async def on_member_join(self,member):
-        channel = self.bot.get_channel(934773565084033094)
-        await channel.send(f"you trash, {member}"[:-5])
-
-
-    @commands.Cog.listener()
-    async def on_member_remove(self,member):
-        channel = self.bot.get_channel(934773565084033094)
-        await channel.send(f"bye, {member}"[:-5])
-
-
+class Chat(Cog_Extension):
     @commands.Cog.listener()
     async def on_message(self,msg):
         msco=msg.content
@@ -31,14 +17,18 @@ class Events(Cog_Extension):
                 await msg.channel.send(file=jpg)
             else:
                 await msg.channel.send(message)
-        elif "dance" in msco and msg.author != self.bot.user:
+
+
+        if "dance" in msco and msg.author != self.bot.user:
             message=random.choice(st["dance"])
             if message.endswith(".gif"):
                 gif=discord.File(message)
                 await msg.channel.send(file=gif)
             else:
                 await msg.channel.send(message)
-        elif "pizza" in msco and msg.author != self.bot.user:
+
+
+        if "pizza" in msco and msg.author != self.bot.user:
             message=random.choice(st["pizzatime"])
             if message.endswith(".jpg"):
                 jpg=discord.File(message)
@@ -46,7 +36,8 @@ class Events(Cog_Extension):
             else:
                 await msg.channel.send(message)
 
-        elif "got" in msco and msg.author != self.bot.user:
+
+        if "got" in msco and msg.author != self.bot.user:
             message=random.choice(st["got"])
             if message.endswith(".jpg"):
                 jpg=discord.File(message)
@@ -54,7 +45,17 @@ class Events(Cog_Extension):
             else:
                 await msg.channel.send(message)
         
-        elif "love" in msco and msg.author != self.bot.user:
+        
+        if "fuck" in msco and msg.author != self.bot.user:
+            message=random.choice(st["fuck"])
+            if message.endswith(".jpg"):
+                jpg=discord.File(message)
+                await msg.channel.send(file=jpg)
+            else:
+                await msg.channel.send(message)
+        
+
+        if "love" in msco and msg.author != self.bot.user:
             message=random.choice(st["love"])
             if message.endswith(".jpg"):
                 jpg=discord.File(message)
@@ -62,6 +63,5 @@ class Events(Cog_Extension):
             else:
                 await msg.channel.send(message)
 
-
 def setup(bot):
-    bot.add_cog(Events(bot))
+    bot.add_cog(Chat(bot))
