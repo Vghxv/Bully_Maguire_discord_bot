@@ -36,7 +36,7 @@ async def rl(ctx,extension):
 
 for filename in os.listdir("./cmds"):
     if filename.endswith(".py"):
-        bot.load_extension(f"cmds.{filename[:-3]}")
+        bot.load_extension(f"cmds.{filename}"[:-3])
 
 
 if __name__=="__main__":
