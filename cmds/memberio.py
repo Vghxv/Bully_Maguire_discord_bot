@@ -17,5 +17,6 @@ class Memberio(Cog_Extension):
         await channel.send(f"bye, {member}"[:-5])
 
 
+#121
 def setup(bot):
     bot.add_cog(Memberio(bot))
