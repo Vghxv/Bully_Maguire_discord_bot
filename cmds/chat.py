@@ -47,12 +47,16 @@ class Chat(Cog_Extension):
         
         
         if "fuck" in msco and msg.author != self.bot.user:
-            message=random.choice(st["fuck"])
-            if message.endswith(".jpg"):
-                jpg=discord.File(message)
+            if msco.endswith(".jpg"):
+                jpg=discord.File(st["fuck"][-1])
                 await msg.channel.send(file=jpg)
             else:
-                await msg.channel.send(message)
+                message=random.choice(st["fuck"])
+                if message.endswith(".jpg"):
+                    jpg=discord.File(message)
+                    await msg.channel.send(file=jpg)
+                else:
+                    await msg.channel.send(message)
         
 
         if "love" in msco and msg.author != self.bot.user:
