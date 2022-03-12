@@ -1,8 +1,8 @@
-import requests
-from bs4 import BeautifulStoneSoup
-import json
-import discord
-import datetime
+# import requests
+# from bs4 import BeautifulStoneSoup
+# import json
+# import discord
+# import datetime
 from discord.ext import commands
 from core.classes import Cog_Extension
 
