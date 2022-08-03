@@ -9,7 +9,6 @@ with open(".\settings.json","r",encoding="UTF8") as settings:
 
 class Settings(Cog_Extension):
 
-
     @commands.command()
     async def ping(self,ctx):
         await ctx.send(f"{round(self.bot.latency*1000)}(ms) gonna cry?")
@@ -31,8 +30,6 @@ class Settings(Cog_Extension):
         embed.add_field(name="Pet Phrase", value="you trash", inline=True)
         embed.set_footer(text="wish you have a bad day")
         await ctx.send(embed=embed)
-
-
 
 def setup(bot):
     bot.add_cog(Settings(bot))

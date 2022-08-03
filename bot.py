@@ -5,7 +5,6 @@ import os
 with open(".\config.json","r",encoding="UTF8") as config:
     conf=json.load(config)
 
-
 intents=discord.Intents.all()
 bot = commands.Bot(command_prefix="-",intents=intents)
 
@@ -16,19 +15,19 @@ async def on_ready():
 
 
 @bot.command()
-async def l(ctx,extension):
+async def load(ctx,extension):
     bot.load_extension(f"cmds.{extension}")
     await ctx.send(f"loaded {extension} done")
 
 
 @bot.command()
-async def ul(ctx,extension):
+async def unload(ctx,extension):
     bot.unload_extension(f"cmds.{extension}")
     await ctx.send(f"un - loaded {extension} done")
 
 
 @bot.command()
-async def rl(ctx,extension):
+async def reload(ctx,extension):
     
     bot.reload_extension(f"cmds.{extension}")
     await ctx.send(f"re - loaded {extension} done")

@@ -1,5 +1,5 @@
-# import requests
-# from bs4 import BeautifulStoneSoup
+import requests
+from bs4 import BeautifulSoup
 # import json
 # import discord
 # import datetime
